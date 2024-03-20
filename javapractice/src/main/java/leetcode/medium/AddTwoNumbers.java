@@ -81,30 +81,10 @@ public class AddTwoNumbers {
                 output = output.next;
             }
         }
-//        else if(l2 != null) {
-//            output.next = new ListNode();
-//            output = output.next;
-//            while(l2 != null) {
-//                final int sum = l2.val + carryForward;
-//                if (sum < 10) {
-//                    output.val = sum;
-//                    carryForward = 0;
-//                } else {
-//                    output.val = sum % 10;
-//                    carryForward = 1;
-//                }
-//                if(l2.next != null) {
-//                    output.next = new ListNode();
-//                    output = output.next;
-//                }
-//                l2 = l2.next;
-//            }
-//        }
+
         if(carryForward > 0) {
             output.next = new ListNode(carryForward, null);
         }
-//        else
-//            output = null;
 
         return head;
     }

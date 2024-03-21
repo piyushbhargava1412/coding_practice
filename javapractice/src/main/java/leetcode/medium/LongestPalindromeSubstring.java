@@ -1,5 +1,6 @@
 package main.java.leetcode.medium;
 
+//https://leetcode.com/problems/longest-palindromic-substring/
 public class LongestPalindromeSubstring {
     public static void main(String[] args) {
         final LongestPalindromeSubstring processor = new LongestPalindromeSubstring();
@@ -19,7 +20,7 @@ public class LongestPalindromeSubstring {
                 maxLen = oddPalindromeOffsets[1];
             }
 
-            int [] evenPalindromeOffsets = findPalindromeOffsets(i, i + 1, s);
+            int[] evenPalindromeOffsets = findPalindromeOffsets(i, i + 1, s);
             if (maxLen < evenPalindromeOffsets[1]) {
                 start = evenPalindromeOffsets[0];
                 maxLen = evenPalindromeOffsets[1];

@@ -2,8 +2,8 @@ package main.java.leetcode.medium;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
+//https://leetcode.com/problems/sort-vowels-in-a-string/
 public class SortVowels {
     public static void main(String[] args) {
         final SortVowels processor = new SortVowels();
@@ -24,11 +24,11 @@ public class SortVowels {
             }
         }
 
-        if(vowels.size() == 0) return s;
+        if (vowels.size() == 0) return s;
 
         final List<Character> sortedVowels = vowels.stream().sorted().toList();
 
-        for(int i = 0; i < vowelIndex.size(); i++) {
+        for (int i = 0; i < vowelIndex.size(); i++) {
             stringBuilder.setCharAt(vowelIndex.get(i), sortedVowels.get(i));
         }
 

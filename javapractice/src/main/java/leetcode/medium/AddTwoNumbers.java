@@ -1,5 +1,6 @@
 package main.java.leetcode.medium;
 
+//https://leetcode.com/problems/add-two-numbers/
 class ListNode {
     int val;
     ListNode next;
@@ -20,15 +21,15 @@ class ListNode {
 public class AddTwoNumbers {
     public static void main(String[] args) {
         final AddTwoNumbers processor = new AddTwoNumbers();
-        int [] list1 = {9,9,9,9,9,9,9};
-        int [] list2 = {9,9,9,9};
+        int[] list1 = {9, 9, 9, 9, 9, 9, 9};
+        int[] list2 = {9, 9, 9, 9};
         System.out.println(processor.addTwoNumbers(createList(list1), createList(list2)));
     }
 
-    public static ListNode createList(int [] nums) {
+    public static ListNode createList(int[] nums) {
         ListNode head = new ListNode(nums[0], null);
         ListNode curr = head;
-        for(int i = 1; i < nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {
             curr.next = new ListNode(nums[i], null);
             curr = curr.next;
         }
@@ -36,15 +37,15 @@ public class AddTwoNumbers {
     }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        if(l1 == null && l2 != null) return l2;
-        if(l2 == null && l1 != null) return l1;
-        if(l1.val == 0 && l1.next == null && l2 != null) return l2;
-        if(l2.val == 0 && l2.next == null && l1 != null) return l1;
+        if (l1 == null && l2 != null) return l2;
+        if (l2 == null && l1 != null) return l1;
+        if (l1.val == 0 && l1.next == null && l2 != null) return l2;
+        if (l2.val == 0 && l2.next == null && l1 != null) return l1;
 
         ListNode output = null;
         int carryForward = 0;
         int sum = l1.val + l2.val;
-        if(sum < 10)
+        if (sum < 10)
             output = new ListNode(sum, null);
         else {
             output = new ListNode(sum % 10, null);
@@ -67,8 +68,8 @@ public class AddTwoNumbers {
 
         l1 = (l1.next == null) ? l2 : l1;
 
-        if(l1.next != null) {
-            while(l1.next != null) {
+        if (l1.next != null) {
+            while (l1.next != null) {
                 l1 = l1.next;
                 sum = l1.val + carryForward;
                 if (sum < 10) {
@@ -82,7 +83,7 @@ public class AddTwoNumbers {
             }
         }
 
-        if(carryForward > 0) {
+        if (carryForward > 0) {
             output.next = new ListNode(carryForward, null);
         }
 

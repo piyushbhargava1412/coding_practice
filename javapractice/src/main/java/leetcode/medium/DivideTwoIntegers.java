@@ -1,5 +1,6 @@
 package main.java.leetcode.medium;
 
+//https://leetcode.com/problems/divide-two-integers/
 public class DivideTwoIntegers {
     public int divide(int dividend, int divisor) {
         long result = 0;
@@ -11,8 +12,8 @@ public class DivideTwoIntegers {
         if (divisor == 1) {
             return dividend;
         } else if (divisor == -1) {
-            if(dividend > 0) return -dividend;
-            if(dividend == negTwoPower31) return (int)twoPower31Minus1;
+            if (dividend > 0) return -dividend;
+            if (dividend == negTwoPower31) return (int) twoPower31Minus1;
             return -dividend;
         } else if (numerator == denominator) {
             return sameSign ? 1 : -1;

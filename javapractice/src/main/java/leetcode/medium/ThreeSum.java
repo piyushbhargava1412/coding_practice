@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//https://leetcode.com/problems/3sum/
 public class ThreeSum {
     public static void main(String[] args) {
         final ThreeSum threeSum = new ThreeSum();
@@ -12,7 +13,7 @@ public class ThreeSum {
         System.out.println(threeSum.threeSum(input));
     }
 
-    public List<List<Integer>> threeSum(int [] nums) {
+    public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> triplets = new ArrayList<>();
 

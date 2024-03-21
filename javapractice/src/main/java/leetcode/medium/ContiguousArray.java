@@ -2,6 +2,7 @@ package main.java.leetcode.medium;
 
 import java.util.HashMap;
 
+//https://leetcode.com/problems/contiguous-array/
 public class ContiguousArray {
     public static void main(String[] args) {
         final ContiguousArray processor = new ContiguousArray();

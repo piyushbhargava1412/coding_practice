@@ -25,4 +25,15 @@ public class ListNode {
     }
     return head;
   }
+
+  public static int len(ListNode head) {
+    if(head == null) return 0;
+    int n = 1;
+    ListNode curr = head;
+    while(curr != null) {
+      curr = curr.next;
+      n++;
+    }
+    return n;
+  }
 }

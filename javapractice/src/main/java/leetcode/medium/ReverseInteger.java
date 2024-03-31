@@ -2,7 +2,7 @@ package main.java.leetcode.medium;
 
 import java.util.ArrayList;
 import java.util.List;
-import main.java.leetcode.Commons;
+import main.java.leetcode.common.Commons;
 
 //https://leetcode.com/problems/reverse-integer/
 public class ReverseInteger {

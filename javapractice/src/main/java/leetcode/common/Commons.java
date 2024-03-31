@@ -1,4 +1,4 @@
-package main.java.leetcode;
+package main.java.leetcode.common;
 
 public class Commons {
 

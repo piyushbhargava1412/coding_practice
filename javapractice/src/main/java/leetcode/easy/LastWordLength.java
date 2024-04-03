@@ -1,5 +1,6 @@
 package main.java.leetcode.easy;
 
+// https://leetcode.com/problems/length-of-last-word/description/
 public class LastWordLength {
     public static void main(String[] args) {
         System.out.println(lengthOfLastWord(" hello"));

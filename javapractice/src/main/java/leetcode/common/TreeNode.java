@@ -1,7 +1,5 @@
 package main.java.leetcode.common;
 
-import lombok.Getter;
-
 // Definition for a binary tree node.
 public class TreeNode {
      public int val;
